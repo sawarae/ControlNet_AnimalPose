@@ -10,6 +10,7 @@ Create a new Conda Environment called 'ControlPose' by using the provided enviro
 
 In short to install MMPose, run these commands: 
 
+```
 pip install -U openmim
 mim install mmengine
 mim install "mmcv>=2.0.0"
@@ -19,6 +20,7 @@ git clone https://github.com/open-mmlab/mmpose.git
 cd mmpose
 pip install -r requirements.txt
 pip install -v -e .
+```
 
 Note that the MMPose repo should be cloned to your home directory.
 
