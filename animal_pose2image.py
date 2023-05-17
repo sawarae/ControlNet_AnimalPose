@@ -9,15 +9,12 @@ import torch
 import random
 
 from pytorch_lightning import seed_everything
-from annotator.util import resize_image, HWC3
-from annotator.openpose import OpenposeDetector
+from annotator.util import resize_image
 from cldm.model import create_model, load_state_dict
 from cldm.ddim_hacked import DDIMSampler
 
 from animal_pose_tools import create_animal_pose_image
 
-
-apply_openpose = OpenposeDetector()
 
 model = create_model('./models/cldm_v15.yaml').cpu()
 model.load_state_dict(load_state_dict('./models/animal_pose_epoch22.ckpt', location='cuda'))

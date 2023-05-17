@@ -8,6 +8,8 @@ This installation guide assumes you already have a Conda Environment set up with
 
 Create a new Conda Environment called 'ControlPose' by using the provided environment.yaml file. (or set them up from scratch).  Now activate this environment ('conda activate ControlPose') and install whatever torchvision, cudatoolkit, and pytorch packages you have working in your Conda pytorch environment. Now follow the installation instructions for MMPose (https://mmpose.readthedocs.io/en/latest/installation.html).
 
+If you are having trouble with this step try installing ControlNet by itself using the ControlNet documentation.  Once you get this environment working, continue to the following steps.
+
 In short to install MMPose, run these commands: 
 
 ```
@@ -28,7 +30,8 @@ Now download these files into the './models' directory:
 
 https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned.ckpt
 
-https://drive.google.com/file/d/1Q0lvCVFx2hGlgI7Q-npJKDFqZRwZltYY/view?usp=share_link
+https://drive.google.com/file/d/1Q0lvCVFx2hGlgI7Q-npJKDFqZRwZltYY/view?usp=share_link 
+(pip install gdown if you want to easily download this model from drive)
 
 https://download.openmmlab.com/mmpose/v1/projects/rtmposev1/rtmpose-m_simcc-ap10k_pt-aic-coco_210e-256x256-7a041aa1_20230206.pth
 
