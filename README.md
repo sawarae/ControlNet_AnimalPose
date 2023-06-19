@@ -2,6 +2,13 @@
 
 <!-- [ControlNet 1.1](https://github.com/lllyasviel/ControlNet-v1-1-nightly) is released. Those new models will be merged to this repo after we make sure that everything is good. -->
 
+I trained this model for a final project in a grad course I was taking at school.  
+If you want to learn more about how this model was trained (and how you can replicate what I did) you can read my paper in the github_page directory.
+Note that the email referenced in that paper is getting shut down soon since I just graduated.
+
+![img](github_page/results_running_dog.png)
+More pictures shown at the end of this file.
+
 # Installation
 
 This installation guide assumes you already have a Conda Environment set up with torchvision, cudatoolkit, and pytorch which works for GPU compute on your system.
@@ -40,6 +47,15 @@ Now that MMPose is installed you should be ready to run the Animal Pose Control 
 Note that the MMPose model used to infer animal poses will have trouble inferring for close-up images of animals or images where not all limbs are present.  Please carefully look at the generated control input skeleton if your inference has unexpected results as this may simply be because MMPose was unable to accurately predict the pose of you input image.
 
 Also note that the MMPose model used to infer animal poses will, in this current version, only work on images with a single animal in them (albeit the model is trained on multi-animal inputs).  If you wish to run inference on a multi-animal input you will need to make your own custom control input skeleton(s) and disable the image preprocessing step in animal_pose2image.py.  
+
+# Gallery
+
+![img](github_page/results_cow.png)
+![img](github_page/results_horse.png)
+![img](github_page/results_hot_pink_cheetah.png)
+![img](github_page/results_camel.png)
+![img](github_page/results_jumping_horse.png)
+![img](github_page/results_metallic_moose.png)
 
 
 # Citation
