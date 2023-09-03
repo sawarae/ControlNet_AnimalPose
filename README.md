@@ -4,7 +4,7 @@
 
 I trained this model for a final project in a grad course I was taking at school.  
 If you want to learn more about how this model was trained (and how you can replicate what I did) you can read my paper in the github_page directory.
-Note that the email referenced in that paper is getting shut down soon since I just graduated.
+Note that the email referenced in that paper is getting shut down soon since I just graduated.  My new email is dbooth@alumni.princeton.edu.
 
 ![img](github_page/results_running_dog.png)
 More pictures shown at the end of this file.
