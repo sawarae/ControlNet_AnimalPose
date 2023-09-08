@@ -44,7 +44,7 @@ https://download.openmmlab.com/mmpose/v1/projects/rtmposev1/rtmpose-m_simcc-ap10
 
 Now that MMPose is installed you should be ready to run the Animal Pose Control Model demo.  Just run animal_pose2image.py in this repo's root directory and it should load a locally hosted webpage where you can upload any image of an animal as a control input and run inference using it.
 
-Note that the MMPose model used to infer animal poses will have trouble inferring for close-up images of animals or images where not all limbs are present.  Please carefully look at the generated control input skeleton if your inference has unexpected results as this may simply be because MMPose was unable to accurately predict the pose of you input image.
+Note that the MMPose model used to infer animal poses will have trouble inferring for close-up images of animals or images where not all limbs are present.  Please carefully look at the generated control input skeleton if your inference has unexpected results as this may simply be because MMPose was unable to accurately predict the pose of your input image.
 
 Also note that the MMPose model used to infer animal poses will, in this current version, only work on images with a single animal in them (albeit the model is trained on multi-animal inputs).  If you wish to run inference on a multi-animal input you will need to make your own custom control input skeleton(s) and disable the image preprocessing step in animal_pose2image.py.  
 
