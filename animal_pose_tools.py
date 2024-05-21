@@ -147,9 +147,9 @@ def find_keypoints(img_path, pose_estimator):
 
 
 # creates and resizes a pose estimate image
-def create_animal_pose_image(original_img):
+def create_animal_pose_image(original_img, workdir='/root', resize=True):
     
-    pose_config = '~/mmpose/configs/animal_2d_keypoint/rtmpose/ap10k/rtmpose-m_8xb64-210e_ap10k-256x256.py' # path to the model's configuration file
+    pose_config = f'{workdir}/mmpose/configs/animal_2d_keypoint/rtmpose/ap10k/rtmpose-m_8xb64-210e_ap10k-256x256.py' # path to the model's configuration file
     pose_checkpoint = './models/rtmpose-m_simcc-ap10k_pt-aic-coco_210e-256x256-7a041aa1_20230206.pth' # path to the model's checkpoint file
 
     # run inference on the image using the model
@@ -205,7 +205,8 @@ def create_animal_pose_image(original_img):
 
     pose_img = padImg(pose_img, size)
     pose_img, scaleFactor = scaleImg(pose_img, size, poseSpanX, poseSpanY, scaleFactor)
-    rescaledCenter = (center_of_keypoints[0]*scaleFactor, center_of_keypoints[1]*scaleFactor)
-    pose_img = smartCrop(pose_img, size, rescaledCenter)
+    if resize:
+        rescaledCenter = (center_of_keypoints[0]*scaleFactor, center_of_keypoints[1]*scaleFactor)
+        pose_img = smartCrop(pose_img, size, rescaledCenter)
 
     return pose_img

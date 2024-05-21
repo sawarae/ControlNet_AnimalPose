@@ -20,14 +20,13 @@ If you are having trouble with this step try installing ControlNet by itself usi
 In short to install MMPose, run these commands: 
 
 ```
+conda env create -f environment.yaml
 pip install -U openmim
 mim install mmengine
-mim install "mmcv>=2.0.0"
-mim install "mmdet>=3.0.0"
+mim install "mmcv==2.1.0" "mmdet==3.2.0"
 cd ~
 git clone https://github.com/open-mmlab/mmpose.git
 cd mmpose
-pip install -r requirements.txt
 pip install -v -e .
 ```
 
